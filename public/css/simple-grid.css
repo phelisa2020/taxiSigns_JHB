@@ -56,6 +56,9 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+  display:flex;
+  align-content: center;
+   
 }
 
 .font-light {
