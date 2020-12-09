@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
+        integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
+        integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/taxi.css">
     <link rel="stylesheet" href="./css/simple-grid.css">
     <title>Taxi sign App</title>
@@ -28,13 +32,13 @@
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img width="547px"  src="img/fourways.jpg" style="width:100%">
+            <img width="547px" src="img/fourways.jpg" style="width:100%">
             <div class="text">Fourways</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img width="499px"  src="img/midrand.jpg" style="width:100%">
+            <img width="499px" src="img/midrand.jpg" style="width:100%">
             <div class="text">Midrand</div>
         </div>
 
@@ -50,10 +54,47 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-    <span>
+    <!-- <span>
         <button class="filterBtn" type="submit">filter</button>
 
-    </span>
+    </span> -->
+
+
+    <div class="center">
+        <input type="text" name="userName" class="nameEntered" placeholder="enter your name">
+    </div>
+
+
+    <div class="location center">
+
+        <input type="radio" name="location" class="location" value="centralStation">
+        <span class="label-body">centralStation</span>
+        <input type="radio" name="location" class="location" value="Fourways">
+        <span class="label-body">Fourways</span>
+        <input type="radio" name="languageType" class="location" value="Midrand">
+        <span class="label-body">Midrand</span>
+        <br><br>
+
+    </div>
+    <br>
+    <div class="submitBtn">
+        <button type="submit">submit</button>
+
+    </div>
+
+    
+        <p class="center"> There are many different ways to get to the same place. Johannesburg
+            is a big place, but once you learn to connect the dots,it can give you the courage to navigate the city.
+            Intuitively guiding users along their trip our  app will involve first selecting an appropriate location as well as the preffered destination. Based on
+            the selection, the
+            app will provide the correct hand signal for that particular location. The user will be able to learn and
+            practice different
+            signs of the location around the city without asking around.
+        </p>
+
+    
+
+
 
 </body>
 <script src="filter.js"></script>
@@ -65,4 +106,5 @@
 <link rel="stylesheet" href="simple-grid.css"> -->
 <!-- <link rel="stylesheet" href="index.html">
 <link rel="stylesheet" href="slide.js"> -->
+
 </html>
