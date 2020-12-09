@@ -56,11 +56,13 @@ app.get("/", async function (req, res) {
 
 
 
-app.get("/practise", async function (req, res) {
+app.get("/practise/:location", async function (req, res) {
 
+  const location = req.params.location
 
   res.render("practise", {
-
+      img : "/img/" + location + ".jpg",
+      location
   });
 
 });
@@ -70,7 +72,7 @@ app.post("/practise", async function (req, res) {
 
     res.render("practice", {
   
-    });
+    });i
   
   });
   
