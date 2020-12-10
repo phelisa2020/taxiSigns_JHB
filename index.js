@@ -56,6 +56,61 @@ app.get("/", async function (req, res) {
 
 
 
+
+app.post("/",  async function (req, res) {
+
+  try {
+
+      var { signs } = await req.body;
+      //this is to select one day because whe you select on day it become a string instead of an array , so this special function does that for you.
+      //checks if its an array if not makes it one.
+      signs = Array.isArray(req.body.signs) ? req.body.signs : [req.body.signs];
+
+      // let userName = req.params.userName;
+
+      let playerName = req.body.playerName;
+
+
+      playerName = userName.charAt(0).toUpperCase() + playerName.slice(1).toLowerCase();
+      // console.log({ userName });
+      var regex = /^[a-zA-Z]+$/;
+
+
+      if (playerName != null && regex.test(playerName)) {
+          // console.log({ days });
+
+          // check if name and days are defined
+          results = await instance.wf(playerName, signs);
+          //console.log({ results });
+         
+
+
+          const flashMsg = await instance.buttonMessage();
+
+          req.flash('regexMes', flashMsg);
+
+      }
+    
+      res.render("index", {
+          //copy userName from get req.params.userName, render userName , then in index.handlebars {{userName}} = sender it dynamically
+          playerName,
+          allPlayers: results,
+        
+
+      });
+
+
+  } catch (error) {
+      console.log(error.name);
+      console.log(error.message);
+      console.log(error.stack);
+
+  }
+
+});
+
+
+
 app.get("/practise/:location", async function (req, res) {
 
   const location = req.params.location
