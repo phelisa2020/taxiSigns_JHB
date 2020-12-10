@@ -17,6 +17,7 @@ const app = express();
 const pg = require("pg");
 const Pool = pg.Pool
 
+
 const connectionString = process.env.DATABASE_URL || 'postgresql://thembajoseph:themba17307@localhost:5432/shoe-database';
 
 const pool = new Pool({
@@ -25,6 +26,8 @@ const pool = new Pool({
 //instance
 const instance = taxis(pool);
 //const instance = waiterer(pool);
+
+
 
 // const greetings = greet(pool);
 // const apiFactory = api(instance)
@@ -42,6 +45,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // // parse application/json
 app.use(bodyParser.json());
 
+const connectionString = process.env.DATABASE_URL || 'postgresql://codex:pg123@localhost:5432/taxi';
+
+const pool = new Pool({
+    connectionString
+  });
+
+// const taxi = Taxi(pool);
 
 app.get("/", async function (req, res) {
 
@@ -174,7 +184,7 @@ app.get("/congra", async function (req, res) {
 
 
 
-const PORT = process.env.PORT || 3015
+const PORT = process.env.PORT || 3016
 
 app.listen(PORT, function () {
   console.log("app started at port:", PORT);

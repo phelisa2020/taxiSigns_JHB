@@ -1,3 +1,4 @@
+
 DROP TABLE playertaxiSigns;
 
 DROP TABLE playersigns_table;
