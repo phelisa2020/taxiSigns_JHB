@@ -17,6 +17,19 @@
 
 
 
+    <H1 class="center ">Taxi sign App</H1>
+    <script language="text/x-template" class="listPlayersTemplate">
+        {{#each users}}
+        
+        <li>{{this.name}}
+            
+            </li>
+        
+        {{/each}}
+        
+        </script>
+
+
 </head>
 
 <body>
@@ -33,23 +46,32 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade center">
             <div class="numbertext">1 / 3</div>
+
+            <img  height="248px" width="217px" src="img/central.jpg" style="width:100%">
+
             <img width="528px" src="img/central.jpg"  style="widows: 100px;">
+
             <div class="text">Central</div>
         </div>
 
         <div class="mySlides fade center">
             <div class="numbertext">2 / 3</div>
-           
-=======
+
+            <img  height="248px" width="217px" src="img/fourways.jpg" style="width:100%">
+
+
             <img width="547px" src="img/fourways.jpg" style="width:100%">
+
 
             <div class="text">Fourways</div>
         </div>
 
         <div class="mySlides fade center">
             <div class="numbertext">3 / 3</div>
+
           
             <img width="499px" src="img/midrand.jpg" style="width:100%">
+
 
             <div class="text">Midrand</div>
         </div>
@@ -66,6 +88,7 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
     <!-- <span>
         <button class="filterBtn" type="submit">filter</button>
     </span> -->
@@ -149,10 +172,43 @@
 
 
 
+
+    <div class="location center">
+
+        <input type="radio" name="location" class="location" value="centralStation">
+        <span class="radioBtn">Central station</span>
+        <input type="radio" name="location" class="location" value="Fourways">
+        <span class="radioBtn">Fourways</span>
+        <input type="radio" name="location" class="location" value="Midrand">
+        <span class="radioBtn">Midrand</span>
+        <br><br>
+
+    </div>
+    <br> 
+    <br>
+    <div class="submitBtn">
+        <button type="submit">submit</button>
+
+    </div>
+
+    <ul class="list"></ul>
+    <!-- <button type="button" onclick="addData()">Add</button> -->
+    <button type="button" onclick="addPlayer()">Add</button>
+    
+        <p class="center"> There are many different ways to get to the same place. Johannesburg
+            is a big place, but once you learn to connect the dots,it can give you the courage to navigate the city.
+            Intuitively guiding users along their trip our  app will involve first selecting an appropriate location as well as the preffered destination. Based on
+            the selection, the
+            app will provide the correct hand signal for that particular location. The user will be able to learn and
+            practice different
+            signs of the location around the city without asking around.
+        </p>
 </body>
 <script src="filter.js"></script>
 <script src="slide.js"></script>
+<script src="index.js"></script>
 <!-- <script src="dropbox.js"></script> -->
+
 
 
 <!-- <link rel="stylesheet" href="taxi.css">

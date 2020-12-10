@@ -1,11 +1,11 @@
 <div class="center">
 <h1>sign for {{location}}</h1>
 <div class="">
-<img class="" src="{{img}}" alt="" height="200">
+<img class="" src="{{img}}" alt="" height="300">
 </div>
 
 
-<div class="">start practicing {{location}} sign</div>
+<div class="">START PRACTISING {{location}} SIGN</div>
 
 <div>
 <button  class="right" type="button" onclick="init()">Start</button>
@@ -58,12 +58,29 @@
     // run the webcam image through the image model
     async function predict() {
         // predict can take in an image, video or canvas html element
+
         const prediction = await model.predict(webcam.canvas);
-        for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
-        }
+		
+		let highestProb = 0;
+		let signName = "";
+
+		prediction.forEach(function(pred){
+			if (pred.probability > highestProb) {
+				highestProb = pred.probability;
+				signName = pred.className;
+			}
+        });
+
+        //if (highestProb > 0.95){
+            console.log(signName);
+
+            if (signName.toLowerCase() === "{{location}}" ) {
+                labelContainer.innerHTML = signName;
+                // incremn
+            }
+
+        //}
+
     }
 </script>
 </div>

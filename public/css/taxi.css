@@ -100,7 +100,7 @@
 .container {
 	width: 100;
 	margin: auto;
-	background-color: white;
+	background-color: #22ffc8;
 	padding: 1em;
 }
 
@@ -120,8 +120,19 @@
 	margin: 0.5em;
 	border-radius: 0.25em;
 }
+
+h1 {
+  font-family: "Arial Black", sans-serif;
+  font-size: 4.5em;
+  letter-spacing: -1px;
+  background-color: black;
+  color: white;
+
+}
+
 .img{
   display: flex;
   justify-content: center;
 }
+
 
