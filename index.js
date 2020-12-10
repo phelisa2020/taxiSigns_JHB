@@ -26,8 +26,6 @@ const pool = new Pool({
 const instance = taxis(pool);
 //const instance = waiterer(pool);
 
-
-
 // const greetings = greet(pool);
 // const apiFactory = api(instance)
 //after ive instantiate my app ,configure , expressJs as handlebars(middleware)
@@ -55,33 +53,60 @@ app.get("/", async function (req, res) {
 });
 
 
+app.get('/api/players', (req, res) => {
+  const players =  [
+    {
+           playername: 'Thabang', signname: "central", tm_model_tag: 2 , player_score: 3
+    }, {
+          playername: 'Jane', signname: "fourways", tm_model_tag: 3, player_score: 3
+    },{
+          playername: 'Thabiso', signname: "midrand", tm_model_tag: 1, player_score: 2
+    },{
+          playername: 'Sipho', signname: "central", tm_model_tag: 2, player_score: 1
+    },
+
+  ]
 
 
-app.post("/",  async function (req, res) {
+  res.send(players)
+})
+
+app.post('/api/players', (req, res)=> {
+  const data = req.body;
+
+  console.log({data})
+  res.send({status:200})
+})
+
+
+
+
+
+app.post("/practise/:",  async function (req, res) {
 
   try {
 
-      var { signs } = await req.body;
+      var { signname } = await req.params;
       //this is to select one day because whe you select on day it become a string instead of an array , so this special function does that for you.
       //checks if its an array if not makes it one.
-      signs = Array.isArray(req.body.signs) ? req.body.signs : [req.body.signs];
+      signname = Array.isArray(req.body.signname) ? req.body.signname : [req.body.signname];
 
       // let userName = req.params.userName;
 
       let playerName = req.body.playerName;
 
 
-      playerName = userName.charAt(0).toUpperCase() + playerName.slice(1).toLowerCase();
+      playername = playername.charAt(0).toUpperCase() + playername.slice(1).toLowerCase();
       // console.log({ userName });
       var regex = /^[a-zA-Z]+$/;
 
 
-      if (playerName != null && regex.test(playerName)) {
+      if (playername != null && regex.test(playername)) {
           // console.log({ days });
 
           // check if name and days are defined
-          results = await instance.wf(playerName, signs);
-          //console.log({ results });
+          results = await instance.wf(playername, signs);
+          console.log({ results });
          
 
 
@@ -117,7 +142,10 @@ app.get("/practise/:location", async function (req, res) {
 
   res.render("practise", {
       img : "/img/" + location + ".jpg",
-      location
+
+      location,
+
+      // web: "http://localhost:3015/practise/" + "/public/ "location
   });
 
 });
