@@ -54,21 +54,49 @@ app.get("/", async function (req, res) {
 
 app.get("/practise/:location", async function (req, res) {
 
-  const location = req.params.location
+  const location1 = req.params.location;
+  console.log(location1);
+  if (location1 === 'centralStation') {
+
+    return ('Hi, you have mastered the central!  you can go to the next level' );
+  }
+  else if (location1 === 'Fourways') {
+    return ('Hi, you have mastered the Fourways!  you can go to the next level');
+  }
+
+  else if (location1 === 'Midrand') {
+    return ('Hi, you have mastered the Fourways!  you can go to the next level');
+  }
 
   res.render("practise", {
-      img : "/img/" + location + ".jpg",
-      location
+      img : "/img/" + location1 + ".jpg",
+      location1
   });
 
 });
 
-app.post("/practise", async function (req, res) {
+app.post("/practise/:location", async function (req, res) {
 
+const location = req.params.location;
+console.log("location")
+		
+			// req.flash('info', 'please enter name!!!!!')
+			if (location === 'centralStation') {
+
+				return ('Hi, you have mastered the central!  you can go to the next location' );
+			}
+			else if (location === 'Fourways') {
+				return ('Hi, you have mastered the Fourways!  you can go to the next location');
+			}
+
+			else if (location === 'Midrand') {
+				return ('Hi, you have mastered the Fourways!  you can go to the next location');
+			}
 
     res.render("practice", {
+      location
   
-    });i
+    });
   
   });
   

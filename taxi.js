@@ -2,18 +2,6 @@ module.exports = function taxis(pool) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 return {
