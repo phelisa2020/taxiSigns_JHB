@@ -1,0 +1,29 @@
+{
+  "name": "taxiSigns_JHB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "12": "^1.0.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phelisa2020/taxiSigns_JHB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phelisa2020/taxiSigns_JHB/issues"
+  },
+  "homepage": "https://github.com/phelisa2020/taxiSigns_JHB#readme"
+}
