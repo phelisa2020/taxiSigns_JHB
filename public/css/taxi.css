@@ -1,3 +1,5 @@
+
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -5,12 +7,15 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
+  
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -93,7 +98,7 @@
   to {opacity: 1}
 }
 .container {
-	width: 80%;
+	width: 100;
 	margin: auto;
 	background-color: white;
 	padding: 1em;
@@ -114,5 +119,9 @@
 	padding : 0.5em;
 	margin: 0.5em;
 	border-radius: 0.25em;
+}
+.img{
+  display: flex;
+  justify-content: center;
 }
 
