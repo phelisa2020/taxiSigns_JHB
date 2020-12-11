@@ -96,7 +96,31 @@
 	width: 80%;
 	margin: auto;
 	background-color: rgb(172, 163, 46);
-	padding: 1em;
+  padding: 1em;
+  
+}
+.btn{
+  margin: 00.5em;
+  width: 10em;
+  padding: 00.5em;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto
+
+
+}
+
+.center{
+  
+  justify-content: center;
+  font-weight: 1000;
+  
+  
+}
+
+p.thicker {
+  font-weight: 900;
 }
 
 .large {
@@ -109,10 +133,5 @@
 	font-size: 105%;
 }
 
-.btn {
-	display: "inline-block";
-	padding : 0.5em;
-	margin: 0.5em;
-	border-radius: 0.25em;
-}
 
+ 
