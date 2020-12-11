@@ -134,4 +134,15 @@ p.thicker {
 }
 
 
- 
+.link {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: gray;
+  border-radius: 0.25em;
+  
+}
+
+.link:hover {
+  background-color: mediumslateblue;
+  color: dodgerblue;
+}
